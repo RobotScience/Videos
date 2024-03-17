@@ -1,0 +1,15 @@
+name: Testing github self-hosted runner
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  pull_request: 
+    types: 
+      - closed
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: self-hosted
+    steps:
+      - run: |
+          echo Pull Request Merged >> ./output.log
+          echo whoami >> ./output.log
+          echo hostname >> ./output.log
