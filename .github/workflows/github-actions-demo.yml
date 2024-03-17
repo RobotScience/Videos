@@ -9,7 +9,6 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: self-hosted
     steps:
-      - run: |
-          echo Pull Request Merged >> ./output.log
-          echo whoami >> ./output.log
-          echo hostname >> ./output.log
+      - name: Copy Videos
+        shell: pwsh
+        run: ./ps/copy_videos.ps1
