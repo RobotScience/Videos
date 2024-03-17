@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Copy Videos
         shell: pwsh
-        run: ./ps/copy_videos.ps1
+        run: .\ps\copy_videos.ps1
